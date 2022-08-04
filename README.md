@@ -11,8 +11,7 @@ From an input folder, `.tiff` images are read and converted into `.jpg`, which a
 
 The python script only requires input and output folders, as well as a boolean value indicating if device was configured in `high_gain` mode. By default it is false.
 
-> High gain mode changes the multiplying factor in the following formula
-**(img * factor - 273.15)** to transform from Kelvin to Celsius. High gain uses a factor of 0.04, whereas the alternative mode uses 0.4.
+> High gain mode changes the multiplying factor in the formula that converts Kelvin measurements to Celsius **(img * factor - 273.15)** . High gain uses a factor of `0.04`, whereas the alternative mode uses `0.4`.
 
 `tiff2jpeg.py --input folder --output folder --high_gain`
 

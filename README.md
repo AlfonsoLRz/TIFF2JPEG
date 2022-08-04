@@ -9,7 +9,7 @@ From an input folder, `.tiff` images are read and converted into `.jpg`, which a
 
 ### Usage
 
-The python script only requires input and output folders, as well as a boolean value indicating if device was configured in `high_gain` mode. By default it is false.
+The python script only requires input and output folders as well as a boolean value indicating if the device was configured in `high_gain` mode. By default, it is false.
 
 > High gain mode changes the multiplying factor in the formula that converts Kelvin measurements to Celsius **(img * factor - 273.15)** . High gain uses a factor of `0.04`, whereas the alternative mode uses `0.4`.
 

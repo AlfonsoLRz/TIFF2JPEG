@@ -45,10 +45,9 @@ if __name__ == '__main__':
                 factor = .04 if args.high_gain else .4
                 tiff_img = (tiff_img * factor - 273.15)             # From kelvin to degrees
                 max, min = np.max(tiff_img), np.min(tiff_img)
-                tiff_img = (tiff_img - min) / (max - min) * 255
 
                 # JPEG + CSV
-                cv2.imwrite(args.output + basename + jpeg_extension, tiff_img)
+                cv2.imwrite(args.output + basename + jpeg_extension, (tiff_img - min) / (max - min) * 255)
                 export_temp_to_csv(args.output + basename + csv_extension, tiff_img)
 
                 # Transfer metadata from TIFF to new JPEG
